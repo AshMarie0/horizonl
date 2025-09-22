@@ -1,0 +1,114 @@
+body {
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #222;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #00FFFF;
+    margin: 0;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #555;
+    margin-top: 10px;
+}
+
+.profile-card {
+    padding: 20px;
+}
+
+.card-content {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.left-section {
+    flex: 1;
+}
+
+.right-section {
+    flex: 0 0 250px; /* Увеличиваем ширину блока с фото на десктопе */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile-photo {
+    width: 250px; /* Увеличиваем фото */
+    height: 250px; /* Увеличиваем фото */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00FFFF;
+}
+
+h2.name {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.details {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.details p {
+    margin: 0;
+}
+
+.bio h3 {
+    margin-top: 0;
+    color: #00FFFF;
+}
+
+/* Правила для мобильных устройств (менее 600px) */
+@media (max-width: 600px) {
+    .card-content {
+        flex-direction: column-reverse; /* Располагаем фото над текстом на телефоне */
+        align-items: center;
+    }
+
+    .right-section {
+        flex: 1 1 auto;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .profile-photo {
+        width: 150px; /* Уменьшаем фото на телефоне, чтобы оно не было слишком большим */
+        height: 150px;
+    }
+
+    .left-section {
+        text-align: center; /* Центрируем текст на телефоне */
+    }
+
+    h2.name {
+        font-size: 28px; /* Уменьшаем размер имени на телефоне */
+    }
+}
