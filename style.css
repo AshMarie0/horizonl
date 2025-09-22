@@ -36,29 +36,33 @@ body {
 }
 
 .profile-card {
+    max-width: 900px;
+    margin: 0 auto;
     padding: 20px;
 }
 
 .card-content {
     display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 .left-section {
-    flex: 1;
+    flex-grow: 1;
+    text-align: left;
 }
 
 .right-section {
-    flex: 0 0 250px; /* Увеличиваем ширину блока с фото на десктопе */
+    flex-shrink: 0;
+    width: 250px;
     display: flex;
     justify-content: flex-end;
 }
 
 .profile-photo {
-    width: 250px; /* Увеличиваем фото */
-    height: 250px; /* Увеличиваем фото */
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #00FFFF;
@@ -68,6 +72,7 @@ h2.name {
     font-size: 36px;
     margin-top: 0;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .details {
@@ -79,36 +84,49 @@ h2.name {
 
 .details p {
     margin: 0;
+    text-align: left;
 }
 
 .bio h3 {
     margin-top: 0;
     color: #00FFFF;
+    text-align: left;
 }
 
-/* Правила для мобильных устройств (менее 600px) */
-@media (max-width: 600px) {
+.bio p {
+    text-align: left;
+}
+
+
+/* Правила для мобильных устройств (менее 768px) */
+@media (max-width: 768px) {
     .card-content {
-        flex-direction: column-reverse; /* Располагаем фото над текстом на телефоне */
+        flex-direction: column;
         align-items: center;
-    }
-
-    .right-section {
-        flex: 1 1 auto;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-
-    .profile-photo {
-        width: 150px; /* Уменьшаем фото на телефоне, чтобы оно не было слишком большим */
-        height: 150px;
+        gap: 20px;
     }
 
     .left-section {
-        text-align: center; /* Центрируем текст на телефоне */
+        order: 2; /* Располагаем текст под фото */
+        text-align: center;
     }
 
-    h2.name {
-        font-size: 28px; /* Уменьшаем размер имени на телефоне */
+    .right-section {
+        order: 1; /* Располагаем фото над текстом */
+        justify-content: center;
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    h2.name,
+    .details p,
+    .bio h3,
+    .bio p {
+        text-align: center; /* Центрируем всё на мобильном */
     }
 }
