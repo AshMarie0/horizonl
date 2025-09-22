@@ -36,7 +36,6 @@ body {
 }
 
 .profile-card {
-    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -92,7 +91,7 @@ h2.name {
 /* Правила для мобильных устройств */
 @media (max-width: 768px) {
     .profile-card {
-        padding: 20px 0; /* Убираем боковые отступы */
+        padding: 20px; 
     }
 
     .card-content {
@@ -102,13 +101,13 @@ h2.name {
     }
 
     .left-section {
-        order: 2; /* Располагаем текст под фото */
-        text-align: left; /* Важно: оставляем выравнивание по левому краю */
-        padding: 0 20px; /* Добавляем небольшой внутренний отступ для текста */
+        order: 2;
+        text-align: left;
+        width: 100%;
     }
     
     .right-section {
-        order: 1; /* Располагаем фото над текстом */
+        order: 1;
         justify-content: center;
         width: 150px;
         height: 150px;
@@ -126,6 +125,6 @@ h2.name {
     .details p,
     .bio h3,
     .bio p {
-        text-align: left; /* Все данные остаются выровненными по левому краю */
+        text-align: left;
     }
 }
