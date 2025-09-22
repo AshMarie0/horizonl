@@ -128,3 +128,82 @@ h2.name {
         text-align: left;
     }
 }
+
+/* --- Стили для главной страницы --- */
+.main-info-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 32px;
+    color: #00FFFF;
+    margin-bottom: 20px;
+}
+
+.mission-text {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.crew-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.crew-title {
+    font-size: 28px;
+    color: #00FFFF;
+    margin-bottom: 20px;
+}
+
+.crew-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.crew-member-link {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crew-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00FFFF;
+    margin-bottom: 10px;
+}
+
+.crew-name {
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 24px;
+    }
+
+    .crew-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .crew-grid {
+        grid-template-columns: 1fr;
+    }
+}
