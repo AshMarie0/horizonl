@@ -50,7 +50,6 @@ body {
 
 .left-section {
     flex-grow: 1;
-    text-align: left;
 }
 
 .right-section {
@@ -72,7 +71,6 @@ h2.name {
     font-size: 36px;
     margin-top: 0;
     margin-bottom: 20px;
-    text-align: left;
 }
 
 .details {
@@ -84,22 +82,19 @@ h2.name {
 
 .details p {
     margin: 0;
-    text-align: left;
 }
 
 .bio h3 {
     margin-top: 0;
     color: #00FFFF;
-    text-align: left;
 }
 
-.bio p {
-    text-align: left;
-}
-
-
-/* Правила для мобильных устройств (менее 768px) */
+/* Правила для мобильных устройств */
 @media (max-width: 768px) {
+    .profile-card {
+        padding: 20px 0; /* Убираем боковые отступы */
+    }
+
     .card-content {
         flex-direction: column;
         align-items: center;
@@ -108,9 +103,10 @@ h2.name {
 
     .left-section {
         order: 2; /* Располагаем текст под фото */
-        text-align: center;
+        text-align: left; /* Важно: оставляем выравнивание по левому краю */
+        padding: 0 20px; /* Добавляем небольшой внутренний отступ для текста */
     }
-
+    
     .right-section {
         order: 1; /* Располагаем фото над текстом */
         justify-content: center;
@@ -123,10 +119,13 @@ h2.name {
         height: 150px;
     }
 
-    h2.name,
+    h2.name {
+        font-size: 28px;
+    }
+
     .details p,
     .bio h3,
     .bio p {
-        text-align: center; /* Центрируем всё на мобильном */
+        text-align: left; /* Все данные остаются выровненными по левому краю */
     }
 }
