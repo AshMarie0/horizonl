@@ -312,3 +312,26 @@ body.auth-page .access-form-container {
 body.auth-page .main-content {
     display: none;
 }
+
+.logout-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 15px;
+    border: 1px solid #00FFFF;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-link:hover {
+    background-color: #00FFFF;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 10px 20px;
+}
