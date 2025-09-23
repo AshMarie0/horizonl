@@ -235,3 +235,72 @@ a {
     }
 }
 
+.access-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.access-form-container h1 {
+    color: #00FFFF;
+    margin-bottom: 20px;
+}
+
+.access-form-container p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+#access-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #222;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#access-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    font-size: 1em;
+}
+
+#access-form input::placeholder {
+    color: #888;
+}
+
+#access-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00FFFF;
+    color: #333;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#access-form button:hover {
+    background-color: #00E6E6;
+}
+
+#error-message {
+    color: #FF6347;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
