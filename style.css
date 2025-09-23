@@ -88,11 +88,18 @@ h2.name {
 }
 
 /* --- Стили для главной страницы --- */
-.main-info-section {
+.main-content-container {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
-    text-align: left;
-    max-width: 900px;
+    gap: 20px;
+    max-width: 95%;
     margin: 0 auto;
+}
+
+.main-info-section {
+    flex-grow: 1;
+    text-align: left;
 }
 
 .main-title {
@@ -102,17 +109,25 @@ h2.name {
     text-align: left;
 }
 
-.mission-text {
+.mission-text-brief {
     font-size: 18px;
     line-height: 1.6;
-    margin: 0 0 40px 0;
+    margin: 0 0 20px 0;
+}
+
+.mission-text-full-block {
+    padding: 20px;
+    max-width: 95%;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .crew-info-block {
     background-color: #222;
     padding: 20px;
-    max-width: 900px;
-    margin: 0 auto;
+    text-align: center;
+    flex-shrink: 0;
+    width: 400px;
 }
 
 .crew-title {
@@ -127,6 +142,7 @@ h2.name {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-items: center;
+    align-items: center;
 }
 
 .crew-member-link {
@@ -138,8 +154,8 @@ h2.name {
 }
 
 .crew-photo {
-    width: 120px; /* Уменьшаем фото */
-    height: 120px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #00FFFF;
@@ -147,61 +163,37 @@ h2.name {
 }
 
 .crew-name {
-    font-size: 18px;
+    font-size: 14px;
     margin: 0;
     text-align: center;
 }
 
 /* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-    .profile-card,
-    .main-info-section,
-    .crew-info-block {
-        padding: 20px; 
-    }
-    
-    .card-content {
+@media (max-width: 900px) {
+    .main-content-container {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-    }
-
-    .left-section {
-        order: 2;
-        text-align: left;
-        width: 100%;
+        gap: 0;
     }
     
-    .right-section {
-        order: 1;
-        justify-content: center;
-        width: 150px;
-        height: 150px;
+    .main-info-section {
+        order: 1; /* Главная информация первой */
+        width: 100%;
     }
 
-    .profile-photo {
-        width: 150px;
-        height: 150px;
+    .crew-info-block {
+        order: 2; /* Члены экипажа вторыми */
+        width: 100%;
+        margin-top: 20px;
     }
 
-    h2.name {
-        font-size: 28px;
-    }
-
-    .details p,
-    .bio h3,
-    .bio p {
-        text-align: left;
+    .mission-text-full-block {
+        order: 3; /* Краткая информация последней */
+        width: 100%;
+        margin-top: 20px;
     }
 
     .crew-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .crew-grid {
-        grid-template-columns: 1fr;
     }
 }
