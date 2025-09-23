@@ -7,6 +7,9 @@ body {
 }
 
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #222;
     padding: 10px 20px;
 }
@@ -40,11 +43,11 @@ body {
 }
 
 .card-content {
-    display: flex; /* Используем flexbox для ПК */
+    display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 40px;
-    max-width: 95%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -89,13 +92,12 @@ h2.name {
     color: #00FFFF;
 }
 
-/* --- Стили для главной страницы --- */
 .main-content-container {
     display: flex;
     justify-content: space-between;
     padding: 20px;
     gap: 20px;
-    max-width: 95%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -119,7 +121,7 @@ h2.name {
 
 .mission-text-full-block {
     padding: 20px;
-    max-width: 95%;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: left;
 }
@@ -169,8 +171,20 @@ h2.name {
     margin: 0;
     text-align: center;
 }
-a {
+
+.logout-link {
+    color: #fff;
     text-decoration: none;
+    font-size: 16px;
+    padding: 8px 15px;
+    border: 1px solid #00FFFF;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-link:hover {
+    background-color: #00FFFF;
+    color: #333;
 }
 
 /* Адаптация для мобильных устройств */
@@ -201,7 +215,7 @@ a {
     .crew-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    /* Стили для страниц членов экипажа */
+
     .card-content {
         flex-direction: column;
         align-items: center;
@@ -209,13 +223,13 @@ a {
     }
     
     .left-section {
-        order: 2; /* Теперь текстовый блок идет вторым */
+        order: 2;
         width: 100%;
         text-align: left;
     }
     
     .right-section {
-        order: 1; /* А блок с фото — первым */
+        order: 1;
         width: 150px;
         height: 150px;
     }
@@ -230,11 +244,15 @@ a {
     .bio p {
         text-align: left;
     }
-    h2.name {
-        text-align: center;
+}
+
+@media (max-width: 480px) {
+    .crew-grid {
+        grid-template-columns: 1fr;
     }
 }
 
+/* Стили для системы доступа */
 .access-form-container {
     display: flex;
     flex-direction: column;
@@ -303,35 +321,4 @@ a {
 
 .hidden {
     display: none;
-}
-
-body.auth-page .access-form-container {
-    display: flex;
-}
-
-body.auth-page .main-content {
-    display: none;
-}
-
-.logout-link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 8px 15px;
-    border: 1px solid #00FFFF;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.logout-link:hover {
-    background-color: #00FFFF;
-    color: #333;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #222;
-    padding: 10px 20px;
 }
