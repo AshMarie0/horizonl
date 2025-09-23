@@ -7,63 +7,71 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo-container">
-            <img src="https://raw.githubusercontent.com/AshMarie0/horizonl/main/logo.png" alt="HORIZONL Logo" class="logo">
-            <h1>HORIZONL</h1>
-        </div>
-    </header>
-    <main>
-        <div class="main-content-container">
-            <section class="main-info-section">
-                <h1 class="main-title">Элитный специальный экипаж HORIZONL <br>(Humanity’s Orbital Recconaissance In Zone Of New-world)</h1>
-                <p class="mission-text-brief">
-                    <b>Цель миссии:</b> комплексное исследование планеты для оценки ее пригодности к дальнейшей колонизации. Программа включает в себя детальный анализ геологического состава, климатических условий, атмосферы и потенциальных биологических угроз. Собранные данные станут основой для разработки последующих этапов терраформирования и создания автономных поселений.<br>
-                    <b>Дата запуска корабля:</b> 15.09.2025<br>
-                    <b>Планируемая продолжительность миссии:</b> 620 земных дней с момента выхода на орбиту.<br>
-                    <b>Текущая продолжительность миссии:</b> 32 земных дня.<br>
-                    <b>Последнее известное местонахождение:</b> Исследовательская станция №1 на планете &laquo;Новый мир&raquo;<br>
-                    <b>Система связи с Землей:</b> стабильна<br>
-                </p>
-            </section>
-            <div class="crew-info-block">
-                <h2 class="crew-title">Члены экипажа</h2>
-                <div class="crew-grid">
-                    <a href="MarcusMarkJohnson.html" class="crew-member-link">
-                        <img src="https://raw.githubusercontent.com/AshMarie0/horizonl/main/MarcusMarkJohnson.jpg" alt="Маркус Марк Джонсон" class="crew-photo">
-                        <p class="crew-name">Маркус Марк Джонсон</p>
-                    </a>
-                    <a href="SamiraHassan.html" class="crew-member-link">
-                        <img src="https://raw.githubusercontent.com/AshMarie0/horizonl/main/SamiraHassan.jpg" alt="Самира Хасан" class="crew-photo">
-                        <p class="crew-name">Самира Хасан</p>
-                    </a>
-                    <a href="JoseGarcia.html" class="crew-member-link">
-                        <img src="https://raw.githubusercontent.com/AshMarie0/horizonl/main/JoseGarcia.jpg" alt="Хосе Гарсия" class="crew-photo">
-                        <p class="crew-name">Хосе Гарсия</p>
-                    </a>
-                    <a href="ElizabethEllieMuller.html" class="crew-member-link">
-                        <img src="https://raw.githubusercontent.com/AshMarie0/horizonl/main/ElizabethEllieMuller.jpg" alt="Элизабет Элли Мюллер" class="crew-photo">
-                        <p class="crew-name">Элизабет Элли Мюллер</p>
-                    </a>
-                    <a href="LiWei.html" class="crew-member-link">
-                        <img src="https://raw.githubusercontent.com/AshMarie0/horizonl/main/LiWei.jpg" alt="Вэй Ли" class="crew-photo">
-                        <p class="crew-name">Вэй Ли</p>
-                    </a>
-                    <a href="tima.html" class="crew-member-link">
-                        <img src="https://raw.githubusercontent.com/AshMarie0/horizonl/main/tima.png" alt="Тимофей Чичугин" class="crew-photo">
-                        <p class="crew-name">Тимофей Чичугин</p>
-                    </a>
+    <div class="access-form-container">
+        <h1>Система безопасности HORIZONL</h1>
+        <form id="access-form">
+            <p>Чтобы получить доступ к данным, введите свой ID и код доступа:</p>
+            <input type="text" id="id-input" placeholder="Введите ID" required>
+            <input type="password" id="access-code-input" placeholder="Введите код доступа" required>
+            <button type="submit">Получить доступ</button>
+            <p id="error-message" class="hidden">Неверный ID или код доступа. Попробуйте снова.</p>
+        </form>
+    </div>
+
+    <div class="main-content hidden">
+        <header class="header">
+            <div class="logo-container">
+                <img src="https://raw.githubusercontent.com/AshMarie0/horizonl/main/logo.png" alt="HORIZONL Logo" class="logo">
+                <h1>HORIZONL</h1>
+            </div>
+        </header>
+        <main>
+            <div class="main-content-container">
+                <section class="main-info-section">
+                    <h1 class="main-title">Элитный специальный экипаж HORIZONL <br>(Humanity’s Orbital Recconaissance In Zone Of New-world)</h1>
+                    <p class="mission-text-brief">
+                        <b>Дата запуска корабля:</b> 15.09.2025<br>
+                        <b>Текущее местонахождение:</b> Вход в орбитальный коридор "Нового мира"<br>
+                    </p>
+                </section>
+                <div class="crew-info-block">
+                    <h2 class="crew-title">Члены экипажа</h2>
+                    <div class="crew-grid">
+                        <a href="MarcusMarkJohnson.html" class="crew-member-link">
+                            <img src="https://raw.githubusercontent.com/AshMarie0/horizonl/main/MarcusMarkJohnson.jpg" alt="Маркус Марк Джонсон" class="crew-photo">
+                            <p class="crew-name">Маркус Марк Джонсон</p>
+                        </a>
+                        <a href="SamiraHassan.html" class="crew-member-link">
+                            <img src="https://raw.githubusercontent.com/AshMarie0/horizonl/main/SamiraHassan.jpg" alt="Самира Хасан" class="crew-photo">
+                            <p class="crew-name">Самира Хасан</p>
+                        </a>
+                        <a href="JoseGarcia.html" class="crew-member-link">
+                            <img src="https://raw.githubusercontent.com/AshMarie0/horizonl/main/JoseGarcia.jpg" alt="Хосе Гарсия" class="crew-photo">
+                            <p class="crew-name">Хосе Гарсия</p>
+                        </a>
+                        <a href="ElizabethEllieMuller.html" class="crew-member-link">
+                            <img src="https://raw.githubusercontent.com/AshMarie0/horizonl/main/ElizabethEllieMuller.jpg" alt="Элизабет Элли Мюллер" class="crew-photo">
+                            <p class="crew-name">Элизабет Элли Мюллер</p>
+                        </a>
+                        <a href="LiWei.html" class="crew-member-link">
+                            <img src="https://raw.githubusercontent.com/AshMarie0/horizonl/main/LiWei.jpg" alt="Вэй Ли" class="crew-photo">
+                            <p class="crew-name">Вэй Ли</p>
+                        </a>
+                        <a href="tima.html" class="crew-member-link">
+                            <img src="https://raw.githubusercontent.com/AshMarie0/horizonl/main/tima.png" alt="Тимофей Чичугин" class="crew-photo">
+                            <p class="crew-name">Тимофей Чичугин</p>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <section class="mission-text-full-block">
-            <p>
-                <h3>Краткая информация об экипаже:</h3> 
-                <p/>Экипаж HORIZONL состоит из шести высококвалифицированных специалистов, отобранных для первой исследовательской миссии к планете "Новый мир". Их задача — подготовить базу для дальнейшей колонизации и проведения детального анализа ресурсов планеты. 
-            </p>
-            <h3>Описание ИИ-ассистента и робототехники</h3>
-            <p>Функционирование орбитальной базы обеспечивается бортовым искусственным интеллектом (ИИ), который управляет ключевыми системами жизнеобеспечения и навигации. В рамках повседневной деятельности и выполнения специализированных задач, экипаж использует автоматизированные роботизированные комплексы. Эти комплексы, оснащенные многофункциональными манипуляторами и сенсорами, способны выполнять широкий спектр операций — от рутинного обслуживания модулей до проведения сложных медицинских процедур под непосредственным контролем квалифицированного персонала. ИИ-ассистент обеспечивает координацию действий роботов и является неотъемлемой частью систем безопасности миссии.</p>
-        </section>
-    </main>
+            <section class="mission-text-full-block">
+                <p>
+                    <b>Краткая информация об экипаже:</b> Экипаж HORIZONL состоит из шести высококвалифицированных специалистов, отобранных для первой исследовательской миссии к планете "Новый мир". Их задача — подготовить базу для дальнейшей колонизации и проведения детального анализа ресурсов планеты. На борту находятся научные сотрудники, инженеры и военные специалисты.
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
