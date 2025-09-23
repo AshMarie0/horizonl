@@ -91,6 +91,8 @@ h2.name {
 .main-info-section {
     padding: 20px;
     text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .main-title {
@@ -103,28 +105,28 @@ h2.name {
 .mission-text {
     font-size: 18px;
     line-height: 1.6;
-    max-width: 800px;
     margin: 0 0 40px 0;
 }
 
-.crew-section {
+.crew-info-block {
+    background-color: #222;
     padding: 20px;
-    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .crew-title {
     font-size: 28px;
     color: #00FFFF;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 .crew-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 900px;
-    margin: 0;
+    gap: 20px;
+    justify-items: center;
 }
 
 .crew-member-link {
@@ -132,12 +134,12 @@ h2.name {
     color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .crew-photo {
-    width: 150px;
-    height: 150px;
+    width: 120px; /* Уменьшаем фото */
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #00FFFF;
@@ -147,14 +149,14 @@ h2.name {
 .crew-name {
     font-size: 18px;
     margin: 0;
-    text-align: left;
+    text-align: center;
 }
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .profile-card,
     .main-info-section,
-    .crew-section {
+    .crew-info-block {
         padding: 20px; 
     }
     
@@ -195,10 +197,6 @@ h2.name {
     .crew-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-    }
-
-    .crew-member-link {
-        align-items: center;
     }
 }
 
