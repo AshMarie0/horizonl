@@ -6,8 +6,20 @@
     <link rel="stylesheet" href="style.css">
     <title>Тимофей Чичугин</title>
 </head>
-<body>
+<body class="auth-page">
 
+    <div class="access-form-container">
+        <h1>Система безопасности HORIZONL</h1>
+        <form id="access-form">
+            <p>Чтобы получить доступ к данным, введите свой ID и код доступа:</p>
+            <input type="text" id="id-input" placeholder="Введите ID" required>
+            <input type="password" id="access-code-input" placeholder="Введите код доступа" required>
+            <button type="submit">Получить доступ</button>
+            <p id="error-message" class="hidden">Неверный ID или код доступа. Попробуйте снова.</p>
+        </form>
+    </div>
+
+    <div class="main-content hidden">
     <header class="header">
         <a href="index.html" class="logo-link">
         <div class="logo-container">
@@ -42,7 +54,10 @@
             </aside>
         </div>
     </main>
+</div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
+
