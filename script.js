@@ -15,19 +15,35 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: '35621-345-6', code: 'Z12-T33-78F' }
     ];
 
-    accessForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const enteredId = idInput.value;
-        const enteredCode = accessCodeInput.value;
-
-        const isValid = validCredentials.some(cred => cred.id === enteredId && cred.code === enteredCode);
-
-        if (isValid) {
-            accessFormContainer.classList.add('hidden');
-            mainContent.classList.remove('hidden');
-        } else {
-            errorMessage.classList.remove('hidden');
+    function checkLoginStatus() {
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        if (isLoggedIn) {
+            if (accessFormContainer) {
+                accessFormContainer.classList.add('hidden');
+            }
+            if (mainContent) {
+                mainContent.classList.remove('hidden');
+            }
         }
-    });
+    }
+
+    if (accessForm) {
+        accessForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const enteredId = idInput.value;
+            const enteredCode = accessCodeInput.value;
+
+            const isValid = validCredentials.some(cred => cred.id === enteredId && cred.code === enteredCode);
+
+            if (isValid) {
+                localStorage.setItem('isLoggedIn', 'true');
+                checkLoginStatus();
+            } else {
+                errorMessage.classList.remove('hidden');
+            }
+        });
+    }
+
+    checkLoginStatus();
 });
