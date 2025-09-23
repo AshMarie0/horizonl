@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const errorMessage = document.getElementById('error-message');
     const mainContent = document.querySelector('.main-content');
     const accessFormContainer = document.querySelector('.access-form-container');
+    const logoutLink = document.getElementById('logout-link');
 
     const validCredentials = [
         { id: '87243-246-1', code: 'X22-J0N-55Y' },
@@ -42,6 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 errorMessage.classList.remove('hidden');
             }
+        });
+    }
+
+    if (logoutLink) {
+        logoutLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('isLoggedIn');
+            window.location.reload();
         });
     }
 
