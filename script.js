@@ -20,10 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
         if (isLoggedIn) {
             if (accessFormContainer) {
-                accessFormContainer.classList.add('hidden');
+                accessFormContainer.style.display = 'none';
             }
             if (mainContent) {
-                mainContent.classList.remove('hidden');
+                mainContent.style.display = 'block';
+            }
+        } else {
+            if (accessFormContainer) {
+                accessFormContainer.style.display = 'flex';
+            }
+            if (mainContent) {
+                mainContent.style.display = 'none';
             }
         }
     }
@@ -40,8 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isValid) {
                 localStorage.setItem('isLoggedIn', 'true');
                 checkLoginStatus();
+                if (errorMessage) {
+                    errorMessage.classList.add('hidden');
+                }
             } else {
-                errorMessage.classList.remove('hidden');
+                if (errorMessage) {
+                    errorMessage.classList.remove('hidden');
+                }
             }
         });
     }
@@ -53,6 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.reload();
         });
     }
-
+    
     checkLoginStatus();
 });
