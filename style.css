@@ -304,3 +304,11 @@ a {
 .hidden {
     display: none;
 }
+
+body.auth-page .access-form-container {
+    display: flex;
+}
+
+body.auth-page .main-content {
+    display: none;
+}
